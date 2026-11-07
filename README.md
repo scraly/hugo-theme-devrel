@@ -1,6 +1,6 @@
 # hugo-theme-devrel
 
-This theme is a fork from [github.com/dadoonet/hugo-theme-devrel](https://github.com/dadoonet/hugo-theme-devrel), modified for my needs (books...).
+This theme is a fork from [github.com/scraly/hugo-theme-devrel](https://github.com/scraly/hugo-theme-devrel), modified for my needs (books...).
 
 **DevRel overlay** for the [Dream](https://github.com/g1eny0ung/hugo-theme-dream) Hugo theme.
 

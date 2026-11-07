@@ -126,14 +126,14 @@ jobs:
           ```toml
           [module]
             [[module.imports]]
-              path = "github.com/dadoonet/hugo-theme-devrel"
+              path = "github.com/scraly/hugo-theme-devrel"
           ```
 
           ```sh
-          hugo mod get github.com/dadoonet/hugo-theme-devrel@TAG_PLACEHOLDER
+          hugo mod get github.com/scraly/hugo-theme-devrel@TAG_PLACEHOLDER
           ```
 
-          That writes the version into `go.mod` (`require github.com/dadoonet/hugo-theme-devrel TAG_PLACEHOLDER`).
+          That writes the version into `go.mod` (`require github.com/scraly/hugo-theme-devrel TAG_PLACEHOLDER`).
           EOF
           sed -i "s/TAG_PLACEHOLDER/${TAG}/g" "$NOTES_FILE"
 
@@ -182,7 +182,7 @@ jobs:
           TAG: ${{ steps.version.outputs.tag }}
         run: |
           set -euo pipefail
-          MOD=github.com/dadoonet/hugo-theme-devrel
+          MOD=github.com/scraly/hugo-theme-devrel
           echo "Indexing ${MOD}@${TAG} on proxy.golang.org"
           curl -fsSL "https://proxy.golang.org/${MOD}/@v/${TAG}.info"
           echo

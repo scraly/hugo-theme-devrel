@@ -1,4 +1,4 @@
-module github.com/dadoonet/hugo-theme-devrel
+module github.com/scraly/hugo-theme-devrel
 
 go 1.22.2
 

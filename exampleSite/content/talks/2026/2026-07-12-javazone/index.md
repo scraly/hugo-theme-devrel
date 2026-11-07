@@ -19,7 +19,7 @@ talk: "Communities that last"
 youtube: "uHfwLjwCIGw"
 attendees: 250
 social:
-  - "https://x.com/dadoonet/status/2095849248780616171"
+  - "https://x.com/scraly/status/2095849248780616171"
   - "https://bsky.app/profile/klf37.bsky.social/post/3muol6taevk2h"
   - "https://www.linkedin.com/embed/feed/update/urn:li:activity:7501648269345812481"
 ---

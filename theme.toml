@@ -1,8 +1,8 @@
 name = "Devrel (talks and posts)"
 license = "MIT"
-licenselink = "https://github.com/dadoonet/hugo-theme-devrel/blob/main/LICENSE"
+licenselink = "https://github.com/scraly/hugo-theme-devrel/blob/main/LICENSE"
 description = "DevRel overlay for the Dream Hugo theme — talks, posts, map, videos, Pagefind search, about"
-homepage = "https://github.com/dadoonet/hugo-theme-devrel"
+homepage = "https://github.com/scraly/hugo-theme-devrel"
 demosite = "https://devrel.hugo.pilato.fr"
 
 tags = ["blog", "portfolio", "dark mode", "talks", "videos", "devrel"]

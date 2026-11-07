@@ -2,7 +2,7 @@
 //
 // Hugo never executes this. It exists so a consuming site can:
 //
-//	import _ "github.com/dadoonet/hugo-theme-devrel"
+//	import _ "github.com/scraly/hugo-theme-devrel"
 //
 // and keep this module as a *direct* require in go.mod. Dependabot's gomod
 // ecosystem ignores dependencies marked // indirect, which is what
