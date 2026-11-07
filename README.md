@@ -1,18 +1,19 @@
 # hugo-theme-devrel
 
+This theme is a fork from [github.com/dadoonet/hugo-theme-devrel](https://github.com/dadoonet/hugo-theme-devrel), modified for my needs (books...).
+
 **DevRel overlay** for the [Dream](https://github.com/g1eny0ung/hugo-theme-dream) Hugo theme.
 
 This is **not** a standalone theme. It imports Dream as a Hugo module dependency and overlays layouts for posts, talks, talk templates, map, videos, and about. End users only import `devrel` — Dream is pulled automatically.
 
 **Live demos:**
-- Production site: [david.pilato.fr](https://david.pilato.fr/)
-- Theme `exampleSite` on GitHub Pages: [devrel.hugo.pilato.fr](https://devrel.hugo.pilato.fr/)
+- Production site: [scraly.com](https://scraly.com/)
 
-![Talks page](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/screenshot.png)
+![Talks page](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/screenshot.png)
 
 ```toml
 [[module.imports]]
-  path = "github.com/dadoonet/hugo-theme-devrel"
+  path = "github.com/scraly/hugo-theme-devrel"
 ```
 
 Do **not** set `theme = ["devrel", "dream"]`. Do **not** vendor or fork Dream into this repo.
@@ -29,6 +30,13 @@ Dream is MIT-licensed (Copyright © 2019 Yue Yang). Attribution is preserved in 
 - Videos listing
 - About page assembled from numbered Markdown sections + `data/socials.toml`
 
+TODO:
+- books
+- collecte et listing des blogs posts depuis dev.to
+- collecte et listing des blogs posts depuis blog ovhcloud
+- cv ?
+- contributions open source
+
 ## Screenshots
 
 Captured from the production site [david.pilato.fr](https://david.pilato.fr/) (no browser chrome). Gallery files follow the [Hugo themes](https://github.com/gohugoio/hugoThemesSiteBuilder#media) spec: `images/screenshot.png` is 1500×1000 (3:2) and `images/tn.png` is 900×600 (3:2). README images use absolute `raw.githubusercontent.com` URLs so they also render on [themes.gohugo.io](https://themes.gohugo.io/).
@@ -37,37 +45,37 @@ Captured from the production site [david.pilato.fr](https://david.pilato.fr/) (n
 
 Featured cards for the latest sessions, then a compact archive, video strip, template previews, and a map summary. This is `images/screenshot.png`.
 
-![Talks hub](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/screenshot.png)
+![Talks hub](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/screenshot.png)
 
 ### All talks — `/talks/all`
 
 The full archive: decade/year jump links with per-year counts, then a card grid (cover, language, slides/video badges, conference, date). Each year also gets its own Leaflet map so you can see where that year happened, not only the global map.
 
-![All talks](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talks-all.png)
+![All talks](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talks-all.png)
 
-![All talks — per-year map](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talks-all-year.png)
+![All talks — per-year map](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talks-all-year.png)
 
 ### Videos — `/talks/videos`
 
 Only talks with a `youtube:` id. Year navigation (red pills), 16:9 cards with YouTube thumbnails, language flag, event name, and a jump to `#video` on the talk page.
 
-![Videos](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talks-videos.png)
+![Videos](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talks-videos.png)
 
 ### Talk templates — `/talks/templates` and `/talks/templates/<slug>`
 
 The catalog lists every recurring topic, sorted by last played date, with “Played N times”. Open a template for stats (first/last, video count), EN/FR tabs, **Talk** vs **Raw** (CFP paste), and the chronological list of conferences.
 
-![Talk templates](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talks-templates.png)
+![Talk templates](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talks-templates.png)
 
-![One talk template](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talk-template.png)
+![One talk template](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talk-template.png)
 
 ### Search, a talk page, the global map
 
 | Search (Ctrl/Cmd+K)                                                                            | Talk page                                                                                         |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| ![Search](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/search.png) | ![Talk](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talk-single.png) |
+| ![Search](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/search.png) | ![Talk](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talk-single.png) |
 
-![Talks map](https://raw.githubusercontent.com/dadoonet/hugo-theme-devrel/main/images/talks-map.png)
+![Talks map](https://raw.githubusercontent.com/scraly/hugo-theme-devrel/main/images/talks-map.png)
 
 Also in [`images/`](images/): homepage (`home.png`), About (`about.png`), and the dedicated `/search` page (`search-page.png`).
 
@@ -84,7 +92,7 @@ Also in [`images/`](images/): homepage (`home.png`), About (`about.png`), and th
    ```toml
    [module]
      [[module.imports]]
-       path = "github.com/dadoonet/hugo-theme-devrel"
+       path = "github.com/scraly/hugo-theme-devrel"
    ```
 
 3. Set your identity and optional integrations:
@@ -148,7 +156,7 @@ Also in [`images/`](images/): homepage (`home.png`), About (`about.png`), and th
 
 ```toml
 # go.mod
-replace github.com/dadoonet/hugo-theme-devrel => ../hugo-theme-devrel
+replace github.com/scraly/hugo-theme-devrel => ../hugo-theme-devrel
 ```
 
 ## Updating the theme
@@ -157,10 +165,10 @@ The theme is a Hugo module, so a new release is picked up from your **site** rep
 
 ```sh
 # Latest release of the theme (and its dependencies, including Dream)
-hugo mod get -u github.com/dadoonet/hugo-theme-devrel
+hugo mod get -u github.com/scraly/hugo-theme-devrel
 
 # or pin a specific release
-hugo mod get github.com/dadoonet/hugo-theme-devrel@v0.5.3
+hugo mod get github.com/scraly/hugo-theme-devrel@v0.5.3
 
 hugo mod tidy
 git diff go.mod go.sum   # only the devrel version and checksums should change
@@ -171,9 +179,9 @@ git push
 
 Notes:
 
-- Remove any `replace github.com/dadoonet/hugo-theme-devrel => ...` line from `go.mod` (see [Local development against a clone](#local-development-against-a-clone)), otherwise the local clone is used instead of the release.
-- Releases are listed on the [Releases page](https://github.com/dadoonet/hugo-theme-devrel/releases). Go module versions are immutable once fetched: if a release has a problem, a new patch version is published rather than moving the tag.
-- If Hugo does not see a version that was just released, bypass the module proxy cache: `GOPROXY=direct hugo mod get github.com/dadoonet/hugo-theme-devrel@vX.Y.Z`.
+- Remove any `replace github.com/scraly/hugo-theme-devrel => ...` line from `go.mod` (see [Local development against a clone](#local-development-against-a-clone)), otherwise the local clone is used instead of the release.
+- Releases are listed on the [Releases page](https://github.com/scraly/hugo-theme-devrel/releases). Go module versions are immutable once fetched: if a release has a problem, a new patch version is published rather than moving the tag.
+- If Hugo does not see a version that was just released, bypass the module proxy cache: `GOPROXY=direct hugo mod get github.com/scraly/hugo-theme-devrel@vX.Y.Z`.
 - To get update PRs automatically, enable Dependabot for the `gomod` ecosystem on your site repository.
 - Extra taxonomies are not inherited from the theme: check the release notes and copy new ones into your site `hugo.toml`.
 
@@ -316,16 +324,16 @@ The example site ships enough pages to exercise every layout:
 
 A GitHub Actions workflow (`.github/workflows/pages.yml`) builds `exampleSite` (Hugo + Pagefind) and deploys it to GitHub Pages on every push to `main`. Pull requests are not built there: Netlify serves the deploy preview (`netlify.toml`, without `--buildFuture`). A separate workflow (`.github/workflows/test-buildfuture.yml`) builds with `--buildFuture` on PRs so scheduled posts stay visible in preview.
 
-**One-time Pages + DNS setup** (needed because `david.pilato.fr` is already the custom domain of the user site `dadoonet.github.io`, which would otherwise redirect project URLs to a 404):
+**One-time Pages + DNS setup** (needed because `david.pilato.fr` is already the custom domain of the user site `scraly.github.io`, which would otherwise redirect project URLs to a 404):
 
-1. DNS: `CNAME` `devrel.hugo.pilato.fr` → `dadoonet.github.io`
+1. DNS: `CNAME` `devrel.hugo.pilato.fr` → `scraly.github.io`
 2. Repo **Settings → Pages → Source = GitHub Actions**
 3. Repo **Settings → Pages → Custom domain** = `devrel.hugo.pilato.fr`, then enable **Enforce HTTPS**
 4. Confirm `exampleSite/static/CNAME` contains `devrel.hugo.pilato.fr` (shipped in this repo)
 
 **One-time Netlify setup** (this is the only `exampleSite` build on PRs; same pattern as [david.pilato.fr](https://david.pilato.fr/)):
 
-1. In Netlify: **Add new project → Import an existing project** → GitHub → `dadoonet/hugo-theme-devrel`
+1. In Netlify: **Add new project → Import an existing project** → GitHub → `scraly/hugo-theme-devrel`
 2. Leave build settings to `netlify.toml` (command, publish directory, env)
 3. Deploy. The first production build is skipped on purpose (`ignore = "exit 0"` on `main` and branch deploys). After that, each PR gets a preview URL from the Netlify GitHub App
 
